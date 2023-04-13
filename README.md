@@ -6,17 +6,17 @@ https://www.figma.com/file/KGdfDkh97lrIJkWOJ2dEeP/Untitled?node-id=0%3A1&t=KFevl
 # Checkist
 ### Caixas de Diálogo
 
-- [] prompt
- - [] alert
- - [] confirm
+- [X] prompt
+ - [X] alert
+ - [X] confirm
 ### Temporizadores
 
-- [] setInterval
- - [] setTimeout
+- [X] setInterval
+ - [X] setTimeout
 ### Funções
 
  - [ ] Função anônima com argumento
- - [ ] Função anônima sem argumento
+ - [X] Função anônima sem argumento
 - [ ]  Função anônima com retorno
 - [ ]  Função auto-executável
 - [ ]  Função com nome
@@ -34,7 +34,7 @@ https://www.figma.com/file/KGdfDkh97lrIJkWOJ2dEeP/Untitled?node-id=0%3A1&t=KFevl
 ### Acesso aos elementos DOM do HTML
 
   - [ ] Via referência DOM pelo id do elemento HTML
-  - [ ] Via getElementByID()
+  - [X] Via getElementByID()
  - [ ]  Via getElementsByName()
  - [ ]  Via getElementsByTagName()
   - [ ] Via seletores CSS usados na função querySelector() ou querySelectorAll()
@@ -49,7 +49,7 @@ https://www.figma.com/file/KGdfDkh97lrIJkWOJ2dEeP/Untitled?node-id=0%3A1&t=KFevl
  - [ ]  Usar pelo menos 3 métodos de manipulação de array
  - [ ]  Usar laço de repetição (for..in ou for..of ou forEach)
   - [ ] Usar pelo menos 3 métodos para manipulação de string
- - [ ]  String Template
+ - [X]  String Template
 ### Objetos
 
  - [ ]  Criar objeto usando função construtora ou notação literal

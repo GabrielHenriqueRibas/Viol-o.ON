@@ -26,8 +26,8 @@ https://www.figma.com/file/KGdfDkh97lrIJkWOJ2dEeP/Untitled?node-id=0%3A1&t=KFevl
 ### Eventos
 
   - [X] Evento de carregamento do documento - onload
-  - [ ] Evento de movimento do mouse
-  - [ ] Evento de teclado - usar charCode ou keyCode
+  - [X] Evento de movimento do mouse
+  - [X] Evento de teclado - usar charCode ou keyCode
   - [ ] Eventos de formulário - onfocus e onblur
   - [ ] Imprimir alguma propriedade do objeto event recebido como parâmetro
   - [ ] Propagação de eventos no modelo bolha (usar target e currentTarget, ou seja, disparar o evento em um elemento filho e capturar em um elemento pai)
@@ -35,7 +35,7 @@ https://www.figma.com/file/KGdfDkh97lrIJkWOJ2dEeP/Untitled?node-id=0%3A1&t=KFevl
 
   - [ ] Via referência DOM pelo id do elemento HTML
   - [X] Via getElementByID()
- - [ ]  Via getElementsByName()
+ - [X]  Via getElementsByName()
  - [ ]  Via getElementsByTagName()
   - [ ] Via seletores CSS usados na função querySelector() ou querySelectorAll()
 ### Tratadores de Evento
@@ -71,7 +71,7 @@ https://www.figma.com/file/KGdfDkh97lrIJkWOJ2dEeP/Untitled?node-id=0%3A1&t=KFevl
  - [X]  Customizar as mensagens nos balões de mensagem
  - [ ]  Usar os atributos de validação dos inputs
  - [ ]  Usar expressões regulares
- - [ ]  Ler e escrever em elementos input com a propriedade value
+ - [X]  Ler e escrever em elementos input com a propriedade value
  - [ ]  Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
  - [X]  Manipulação de elemento de listagem, como checkbox, radio ou select
  - [ ]  Acesso aos elementos de um formulário via hierarquia (caminho) de objetos, ou seja, array forms e elements

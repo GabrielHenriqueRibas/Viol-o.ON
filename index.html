@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="bg-gray-200">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/CSS.css">
+
+  <title>Violão.ON</title>
+</head>
+
+<body>
+  <nav class="bg-white py-4">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between">
+        <div id="logo-site">
+          Violão.on
+        </div>
+        <div class="icone">
+          <a href="" class="text-violet-950">
+            <i id="icone" class="material-icons prefix">account_circle</i>
+            <h2 class="ml-2">Conta</h2>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="mx-48 mt-20">
+      <h1 class="text-3xl mt-8 font-sans mb-4 text-violet-950">DEFINIÇÕES</h1>
+      <hr class="border-violet-950 mb-10">
+      <div class="flex items-center">
+        <div class="flex flex-col mr-8">
+          <h1 class="text-violet-950">Nota:</h1>
+          <select class="border-gray-900 rounded-lg mr-4 py-2 px-4 mb-10 w-64" name="nota">
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+          </select>
+          <div>
+            <h1 class="text-violet-950">Posição do violão:</h1>
+            <input type="radio" name="posicao" value="destro">
+            <label for="destro" class="text-violet-950">Destro</label>
+          </div>
+          <div class="mb-10">
+            <input type="radio" name="posicao" value="canhoto">
+            <label for="canhoto" class="text-violet-950">Canhoto</label>
+          </div>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-10">Buscar</button>
+        </div>
+        <div class="flex items-center">
+          <img class="" src="">
+        </div>
+      </div>
+      <h1 class="text-3xl mt-8 font-sans mb-4 text-violet-950">VARIAÇÕES DAS NOTAS</h1>
+      <hr class="border-violet-950 mb-14">
+    </div>
+  </main>
+
+  <div id="propaganda">
+    <img src="/img/propaganda.jpg" alt="Propaganda">
+    <div id="contador"></div>
+  </div>
+
+
+  <script src="/script/index.js"></script>
+</body>
+
+</html>

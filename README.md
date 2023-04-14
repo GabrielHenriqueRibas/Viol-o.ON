@@ -19,13 +19,13 @@ https://www.figma.com/file/KGdfDkh97lrIJkWOJ2dEeP/Untitled?node-id=0%3A1&t=KFevl
  - [X] Função anônima sem argumento
 - [ ]  Função anônima com retorno
 - [ ]  Função auto-executável
-- [ ]  Função com nome
-- [ ] Função aninhada/local - declarar uma função dentro de outra
-- [ ]  Passagem de uma função como parâmetro
-- [ ]  Função Flecha - Arrow Function
+- [X]  Função com nome
+- [X] Função aninhada/local - declarar uma função dentro de outra
+- [X]  Passagem de uma função como parâmetro
+- [X]  Função Flecha - Arrow Function
 ### Eventos
 
-  - [ ] Evento de carregamento do documento - onload
+  - [X] Evento de carregamento do documento - onload
   - [ ] Evento de movimento do mouse
   - [ ] Evento de teclado - usar charCode ou keyCode
   - [ ] Eventos de formulário - onfocus e onblur
@@ -61,23 +61,23 @@ https://www.figma.com/file/KGdfDkh97lrIJkWOJ2dEeP/Untitled?node-id=0%3A1&t=KFevl
  - [ ]  Usar um lint - mostrar a correção de pelo menos 5 problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
  - [ ]  Usar strict mode
   - [ ] Usar Module Pattern
- - [ ]  Usar pasta assets e subpastas resources e libraries para organizar o código
- - [ ]  Usar let ou const ao invés de var
-  - [ ] Nomes de arquivos minúsculos e separados por hífen (dashed-case)
+ - [X]  Usar pasta assets e subpastas resources e libraries para organizar o código
+ - [X]  Usar let ou const ao invés de var
+  - [X] Nomes de arquivos minúsculos e separados por hífen (dashed-case)
 ### Formulário
 
  - [ ]  Validação de formulário com onsubmit usando os métodos tradicionais
  - [ ]  Validação de formulário com HTML5 API
- - [ ]  Customizar as mensagens nos balões de mensagem
+ - [X]  Customizar as mensagens nos balões de mensagem
  - [ ]  Usar os atributos de validação dos inputs
  - [ ]  Usar expressões regulares
  - [ ]  Ler e escrever em elementos input com a propriedade value
  - [ ]  Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
- - [ ]  Manipulação de elemento de listagem, como checkbox, radio ou select
+ - [X]  Manipulação de elemento de listagem, como checkbox, radio ou select
  - [ ]  Acesso aos elementos de um formulário via hierarquia (caminho) de objetos, ou seja, array forms e elements
 ### jQuery
 
- - [ ]  Uso de seletores CSS - id, classe e tag
+ - [X]  Uso de seletores CSS - id, classe e tag
  - [ ]  Uso de seletores hierárquicos estáticos - ancestral/descendente, pai/filho, anterior/próximo
  - [ ]  Uso de seletores hierárquicos dinâmicos - parent/children/next
  - [ ]  Efeitos fade ou slide

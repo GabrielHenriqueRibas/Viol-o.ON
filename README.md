@@ -1,5 +1,3 @@
-# Site de vendas
-
 ### Projeto de web2 (Protótipo):
 https://www.figma.com/file/KGdfDkh97lrIJkWOJ2dEeP/Untitled?node-id=0%3A1&t=KFevlEAFln9sFscH-1
 
@@ -55,26 +53,28 @@ https://www.figma.com/file/KGdfDkh97lrIJkWOJ2dEeP/Untitled?node-id=0%3A1&t=KFevl
  - [ ]  Criar objeto usando função construtora ou notação literal
  - [ ]  Criar objetos a partir da definição de classes do ES6
   - [ ] Usar herança prototipal nativa ou herança de classes do ES6
+
+
 ### Qualidade do código
-
- - [ ]  Usar um Style Guide - apresentar o uso de pelo menos 10 regras do style escolhido (sugerido AirBnb)
- - [ ]  Usar um lint - mostrar a correção de pelo menos 5 problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
- - [ ]  Usar strict mode
-  - [ ] Usar Module Pattern
- - [X]  Usar pasta assets e subpastas resources e libraries para organizar o código
- - [X]  Usar let ou const ao invés de var
-  - [X] Nomes de arquivos minúsculos e separados por hífen (dashed-case)
+- [X] Usar um Style Guide - apresentar o uso de pelo menos 10 regras do style escolhido (sugerido AirBnb)
+- [X] Usar um Lint - corrigir todos os problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
+- [X] Usar strict mode - em todos os arquivos
+- [] Usar Module Pattern com função auto-executável ou o conceito de módulo do ES6 com operadores export e import
+- [X] Usar pasta assets e subpastas resources e libraries para organizar o código
+- [X] Usar let ou const ao invés de var
+- [X] Nomes de arquivos HTML, JS e CSS minúsculos e separados por hífen (dashed-case)
 ### Formulário
+- [X] Validação de formulário com onsubmit usando os métodos tradicionais - é a fase executada após a validação via HTML5
+- [X] Validação de formulário com HTML5 API
+- [X] Customizar as mensagens nos balões de mensagem
+- [X] Usar os atributos de validação dos inputs - required ou type="email" ou outros
+- [X] Usar expressões regulares para validação - usar no atributo pattern do respectivo input
+- [X] Ler e escrever em elementos input com a propriedade value
+- [X] Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
+- [X] Manipulação de elemento de listagem, como checkbox, radio ou select
+- [X]Acesso aos elementos de um formulário via hierarquia (caminho) de objetos, ou seja, array forms e elements
 
- - [ ]  Validação de formulário com onsubmit usando os métodos tradicionais
- - [ ]  Validação de formulário com HTML5 API
- - [X]  Customizar as mensagens nos balões de mensagem
- - [ ]  Usar os atributos de validação dos inputs
- - [ ]  Usar expressões regulares
- - [X]  Ler e escrever em elementos input com a propriedade value
- - [ ]  Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
- - [X]  Manipulação de elemento de listagem, como checkbox, radio ou select
- - [ ]  Acesso aos elementos de um formulário via hierarquia (caminho) de objetos, ou seja, array forms e elements
+
 ### jQuery
 
  - [X]  Uso de seletores CSS - id, classe e tag

@@ -20,7 +20,7 @@
           Violão.on
         </div>
         <div class="icone">
-          <a href="" class="text-violet-950">
+          <a href="app/pages/conta/conta.html" class="text-violet-950">
             <i id="icone" class="material-icons prefix">account_circle</i>
             <h2 id="conta" class="ml-2">Conta</h2>
           </a>
@@ -36,7 +36,7 @@
       <div class="flex items-center">
         <div class="flex flex-col mr-8">
           <h1 class="text-violet-950">Nota:</h1>
-          <select class="border-gray-900 rounded-lg mr-4 py-2 px-4 mb-10 w-64" name="nota">
+          <select class="border-gray-900 rounded-lg mr-4 py-2 px-4 mb-10 w-64" name="nota" id="selecao-nota">
             <option value="C">C</option>
             <option value="D">D</option>
             <option value="E">E</option>
@@ -54,11 +54,11 @@
             <input type="radio" name="posicao" value="canhoto">
             <label for="canhoto" class="text-violet-950">Canhoto</label>
           </div>
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-10">Buscar</button>
+          <button name="botao" style="cursor:pointer" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-10">Buscar</button>
         </div>
-        <div class="flex items-center">
-          <img class="" src="">
-        </div>
+        <div class="w-64 h-40">
+          <img id="acordes-img" class="paisagem" src="assets/resources/img/fundo-notas.png">
+        </div>        
       </div>
       <h1 class="text-3xl mt-8 font-sans mb-4 text-violet-950">VARIAÇÕES DAS NOTAS</h1>
       <hr class="border-violet-950 mb-14">
@@ -70,7 +70,9 @@
     <div id="contador"></div>
   </div>
 
+  <div id="elemento-pai"></div>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="assets/resources/script/index.js"></script>
 </body>
 

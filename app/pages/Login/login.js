@@ -1,24 +1,41 @@
+/* global $ */
+//Leitura de JSON
+const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+//Uso confirm
 const confirmacao = confirm('Você possui uma conta?');
 if (!confirmacao) {
-    window.location.href = '/app/model/pages/Cadastro/cadastro.html';
+    window.location.href = '../Cadastro/cadastro.html';
 }
 
-function fazerLogin() {
-    let email = document.getElementById('valida-email').value;
-    let senha = document.getElementById('senha').value;
-    let mensagem;
 
-    if (email == 'ghr@gmail.com' && senha == '123') {
-        mensagem = 'Login realizado com sucesso!';
-        window.location = '/index.html';
-    } else {
-        mensagem = 'Usuário ou senha inválidos. Tente novamente.';
-    }
-    alert(mensagem);
-}
-
+//Uso função anônima com argumento
 document.addEventListener('keydown', function (event) {
-    if (event.key === '7') {
-        window.location = '/index.html';
+    //Imprime propriedade/atributo do evento
+    if (event.key === '*') {
+        window.location = '../../../index.html';
     }
+});
+
+//Uso Arrow Function
+const fazerLogin = () => {
+    const email = document.getElementById('email').value;
+    //const senha = window['senha'];
+    let senha = document.getElementById('senha').value;
+    const usuarioCadastrado = usuarios.find(usuario => usuario.email === email && usuario.senha === senha);
+    if (usuarioCadastrado) {
+        alert('Login realizado com sucesso!');
+        window.location.href = '../../../index.html';
+    } else {
+        alert('Usuário ou senha inválidos. Tente novamente.');
+    }
+};
+
+//Uso onblur
+function mudarCor(elemento) {
+    elemento.style.backgroundColor = '#23238E';
+}
+
+$(document).ready(function() {
+    $('#email').mask('email');
 });

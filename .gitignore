@@ -1,0 +1,7 @@
+# Arquivo .gitignore
+
+# Diretórios a serem ignorados
+node_modules/
+package-lock.json/
+package.json
+

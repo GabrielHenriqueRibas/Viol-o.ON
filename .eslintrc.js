@@ -13,7 +13,6 @@ module.exports = {
     },
 
     'rules': {
-        'strict': ['error', 'global'],
         'indent': ['error', 4, { 'SwitchCase': 1 }],
         'semi': ['error', 'always'],
         'quotes': ['error', 'single'],

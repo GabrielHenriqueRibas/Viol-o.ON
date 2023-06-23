@@ -29,7 +29,7 @@
           <div class="mb-4">
             <h1 class="block text-white font-sans text-sm mb-2"> Nome </h1>
             <input
-              pattern="^([A-Z a-z | ã-ñ]+\s?)+$" id="nome"
+              pattern="^([A-Za-zã-ñ]+\s?)+$" id="nome"
               class="shadow appearance-none border border-white rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent hover:border-slate-400"
               type="text" value="Digite seu nome" required>
           </div>
@@ -38,6 +38,14 @@
             <input id="gmail"
               class="shadow appearance-none border border-white rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent hover:border-slate-400"
               type="email" placeholder="Digite seu e-mail" required>
+          </div>
+          <div class="mb-4">
+            <h1 class="block text-white font-sans text-sm mb-2"> Numero </h1>
+            <div class="relative">
+              <input id="numero"
+                class="shadow appearance-none border border-white rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent hover:border-slate-400"
+                type="tel" required>
+            </div>
           </div>
             <div class="mb-4">
               <h1 class="block text-white font-sans text-sm mb-2"> Senha </h1>
@@ -49,7 +57,7 @@
             </div>
             <div class="mb-4">
               <div class="relative">
-                <input id="confirma-senha"
+                <input id="confirmaSenha"
                   class="shadow appearance-none border border-white rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent hover:border-slate-400"
                   type="password" placeholder="Confirmar senha" required>
               </div>
@@ -69,6 +77,8 @@
     </div>
   </main>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../../../jquery-mask.js"></script>
   <script src="../Cadastro/cadastro.js"></script>
 
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="bg-[url('/assets/img/fundo.png')] bg-cover bg-center bg-no-repeat">
+<html lang="pt-br" class="bg-[url('../../../assets/resources/img/fundo.png')] bg-cover bg-center bg-no-repeat">
 
 <head>
   <meta charset="UTF-8">
@@ -22,23 +22,22 @@
           <h2 class="text-white text-2xl font-bold mb-4"> Entrar </h2>
           <div class="mb-4">
             <h1 class="block text-white font-sans text-sm mb-2" for="email"> E-mail</h1>
-            <input id="valida-email"
+            <input id="email"
               class="shadow appearance-none border border-white rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent hover:border-slate-400"
-              id="email" type="email" placeholder="Digite seu e-mail">
+              type="email" placeholder="Digite seu e-mail" onblur="mudarCor(this)"> 
           </div>
           <div class="mb-4">
             <h1 class="block text-white font-sans text-sm mb-2" for="password"> Senha </h1>
             <div class="relative">
               <input id="senha"
                 class="shadow appearance-none border border-white rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent hover:border-slate-400"
-                id="password" type="password" placeholder="Digite sua senha">
+                type="password" placeholder="Digite sua senha" onblur="mudarCor(this)">
             </div>
           </div>
           <div class="flex items-center justify-between">
-            <a onclick="fazerLogin()"
-              class="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-auto w-full flex items-center">
+            <button onclick="fazerLogin()" class="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-auto w-full flex items-center">
               <span class="text-center w-full">Entrar</span>
-            </a>
+            </button>
           </div>
           <h1 class="text-center text-white mt-2"> Não possui cadastro? <a href="../Cadastro/cadastro.html"
               class="text-center text-blue-500 mt-2"> Cadastrar </a> </h1>
@@ -46,7 +45,10 @@
       </div>
     </div>
   </main>
-  <script src="/app/model/pages/Login/login.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../../../jquery-mask.js"></script>
+  <script src="login.js"></script>
 </body>
 
 </html>

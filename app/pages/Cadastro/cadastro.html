@@ -24,29 +24,29 @@
     <div class="h-screen flex flex-col justify-center items-center">
       <div class="w-full max-w-md">
         <div class="bg-white bg-opacity-5 shadow-lg p-8">
-          <form onsubmit="return validarFormulario(event)">
-          <h2 class="text-white text-2xl font-bold mb-4"> Cadastro </h2>
-          <div class="mb-4">
-            <h1 class="block text-white font-sans text-sm mb-2"> Nome </h1>
-            <input
-              pattern="^([A-Za-zã-ñ]+\s?)+$" id="nome"
-              class="shadow appearance-none border border-white rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent hover:border-slate-400"
-              type="text" value="Digite seu nome" required>
-          </div>
-          <div class="mb-4">
-            <h1 class="block text-white font-sans text-sm mb-2"> E-mail</h1>
-            <input id="gmail"
-              class="shadow appearance-none border border-white rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent hover:border-slate-400"
-              type="email" placeholder="Digite seu e-mail" required>
-          </div>
-          <div class="mb-4">
-            <h1 class="block text-white font-sans text-sm mb-2"> Numero </h1>
-            <div class="relative">
-              <input id="numero"
+          <form>
+            <h2 class="text-white text-2xl font-bold mb-4"> Cadastro </h2>
+            <div class="mb-4">
+              <h1 class="block text-white font-sans text-sm mb-2"> Nome </h1>
+              <input
+                pattern="^([A-Za-zã-ñ]+\s?)+$" id="nome"
                 class="shadow appearance-none border border-white rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent hover:border-slate-400"
-                type="tel" required>
+                type="text" value="Digite seu nome" required>
             </div>
-          </div>
+            <div class="mb-4">
+              <h1 class="block text-white font-sans text-sm mb-2"> E-mail</h1>
+              <input id="gmail"
+                class="shadow appearance-none border border-white rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent hover:border-slate-400"
+                type="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="mb-4">
+              <h1 class="block text-white font-sans text-sm mb-2"> Numero </h1>
+              <div class="relative">
+                <input id="numero"
+                  class="shadow appearance-none border border-white rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent hover:border-slate-400"
+                  type="tel" required>
+              </div>
+            </div>
             <div class="mb-4">
               <h1 class="block text-white font-sans text-sm mb-2"> Senha </h1>
               <div class="relative">
@@ -62,13 +62,13 @@
                   type="password" placeholder="Confirmar senha" required>
               </div>
             </div>
-          <div class="flex items-center justify-between">
-            <button type="submit"
-              class="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-auto w-full flex items-center">
-              <span class="text-center w-full" value="Cadastrar">Cadastrar</span>
-            </button >
+            <div class="flex items-center justify-between">
+              <button type="submit" id="botao"
+                class="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-auto w-full flex items-center">
+                Cadastrar
+              </button>
+            </div>
           </form>
-          </div>
           <h1 class="text-center text-white mt-2"> Já possui cadastro? <a href="../Login/login.html"
               class="text-center text-blue-500 mt-2"> Entrar </a> </h1>
         </div>
@@ -79,7 +79,7 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="../../../jquery-mask.js"></script>
-  <script src="../Cadastro/cadastro.js"></script>
+  <script type="module" src="../Cadastro/cadastro.js"></script>
 
 </body>
 

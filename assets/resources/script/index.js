@@ -53,7 +53,7 @@ validarExperiencia();
     window.addEventListener('load', addPropaganda);
 })();
 
-//Uso passagem de uma função como parâmetro para outra função
+//Uso passagem de uma função como parâmetro para outra função e getElementByName
 const botao = document.getElementsByName('botao')[0];
 botao.addEventListener('mouseover', function() {
     //Uso movimento mouse

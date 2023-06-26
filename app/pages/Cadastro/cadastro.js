@@ -1,11 +1,17 @@
 /* global $ */
-function validarFormulario(event) {
+import { Usuario } from '../../model/Usuario.js';
+
+$(document).ready(function() {
+    $('#numero').mask('(00) 0000-0000');
+});
+
+const button = document.getElementById('botao');
+
+const validarFormulario = (event) => {
     event.preventDefault();
   
-    //Uso getElementById
     const gmail = document.getElementById('gmail');
     const nome = document.getElementById('nome');
-    //Uso querySelector
     const num = document.getElementById('numero');
     const senha = document.querySelector('#senha');
     const confirmaSenha = document.getElementById('confirmaSenha');
@@ -14,28 +20,24 @@ function validarFormulario(event) {
         return false;
     }
   
-    if (gmail.value === '') {
-        return false;
+    // Verifica se já existe a matriz 'usuarios' no localStorage
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+  
+    if (!usuarios) {
+        usuarios = [];
     }
   
-    if (senha.value != confirmaSenha.value) {
+    if (senha.value !== confirmaSenha.value) {
         senha.setCustomValidity('As senhas não correspondem');
         confirmaSenha.setCustomValidity('As senhas não correspondem');
         return false;
     } else {
-        const usuario = {
-            nome: nome.value,
-            num : num.value,
-            email: gmail.value,
-            senha: senha.value,
-        };
-        
-        localStorage.setItem('nome', nome.value);
-
-        //Leitura e escrita de JSON - dado transformado a partir de um objeto
-        const usuarios = [];
+        let usuario = new Usuario(nome.value, gmail.value, senha.value);
+  
+        // Adiciona o novo usuário à matriz de usuários
         usuarios.push(usuario);
-        
+  
+        // Armazena a matriz atualizada no localStorage
         localStorage.setItem('usuarios', JSON.stringify(usuarios));
   
         gmail.value = '';
@@ -43,26 +45,22 @@ function validarFormulario(event) {
         nome.value = '';
         senha.value = '';
   
-        //Uso alert
         alert('Cadastro realizado com sucesso!');
   
-        // Redirecionar para a próxima página
         window.location.href = '../../../index.html';
   
         return true;
     }
-}
+};
   
+
+button.addEventListener('click', validarFormulario);
+
+const showMessage = () => {
+};
+
 const formSubmit = () => {
-    //Uso Arrow Function
-    const showMessage = () => {
-    };
-  
     showMessage();
 };
-formSubmit();
 
-//Uso mask jquery
-$(document).ready(function() {
-    $('#numero').mask('(00) 0000-0000');
-});
+formSubmit();

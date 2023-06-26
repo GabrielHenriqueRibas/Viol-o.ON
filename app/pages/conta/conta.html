@@ -18,19 +18,18 @@
                 <h1 class="text-white text-2xl font-bold mb-4">Informações do Usuário</h1>
                 <div class="mb-4 flex items-center text-white">
                     <label class="block font-bold mr-2">Nome:</label>
-                    <p id="nome" class="mb-0">Nome do usuário</p>
+                    <h2 id="nome" class="mb-0">Nome do usuário</h2>
                 </div>
                 <div class="mb-4 flex items-center text-white mb-8">
                   <label class="block font-bold mr-2">Email:</label>
                   <p id="email" class="mb-0">usuario@example.com</p>
                 </div>
-                <!-- Cadastro de Localização -->
                 <div>
                   <h2 class="text-xl font-bold text-white mb-2">Cadastro de Localização</h2>
                   <form>
                     <div class="mb-4 flex">
                         <input type="text" id="cep" class="border rounded-lg px-4 py-2 mr-2" placeholder="Digite o CEP">
-                        <button id="busca-cep" type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="buscarCEP()">Buscar</button>
+                        <button id="busca-cep" type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Buscar</button>
                       </div>
                     
                       <div class="mb-4 flex items-center text-white">
@@ -45,23 +44,19 @@
                         <label class="block font-bold mr-2">Cidade:</label>
                         <p id="cidade" class="mb-0"></p>
                     </div>
-
                     <div id="mensagem-erro" class="text-red-500"></div>
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Atualizar informações</button>
+                    <button id="atualizar-informacoes" type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Atualizar informações</button>
                     <a href="../Login/login.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Entrar em outra conta</a>
                   </form>
                 </div>
               </div>
               
         </div>
-         
-
       </div>
     </div>
   </main>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="conta.js"></script>
-
 </body>
 
 </html>

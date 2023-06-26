@@ -1,28 +1,29 @@
 /* global $ */
-//Leitura de JSON
+// Leitura de JSON
 const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-//Uso confirm
+// Uso confirm
 const confirmacao = confirm('Você possui uma conta?');
 if (!confirmacao) {
     window.location.href = '../Cadastro/cadastro.html';
 }
 
-
-//Uso função anônima com argumento
+// Uso função anônima com argumento
 document.addEventListener('keydown', function (event) {
-    //Imprime propriedade/atributo do evento
     if (event.key === '*') {
         window.location = '../../../index.html';
     }
 });
 
-//Uso Arrow Function
+// Uso Arrow Function
 const fazerLogin = () => {
     const email = document.getElementById('email').value;
-    //const senha = window['senha'];
     let senha = document.getElementById('senha').value;
-    const usuarioCadastrado = usuarios.find(usuario => usuario.email === email && usuario.senha === senha);
+
+    const usuarioCadastrado = usuarios.find(
+        (usuario) => usuario.gmail === email && usuario.senha === senha,
+    );
+
     if (usuarioCadastrado) {
         alert('Login realizado com sucesso!');
         window.location.href = '../../../index.html';
@@ -31,11 +32,7 @@ const fazerLogin = () => {
     }
 };
 
-//Uso onblur
+// Uso onblur
 function mudarCor(elemento) {
     elemento.style.backgroundColor = '#23238E';
 }
-
-$(document).ready(function() {
-    $('#email').mask('email');
-});

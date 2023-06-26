@@ -34,8 +34,8 @@ https://www.figma.com/file/KGdfDkh97lrIJkWOJ2dEeP/Untitled?node-id=0%3A1&t=KFevl
 ### Acesso aos elementos DOM do HTML
 - [] Via referência DOM pelo id do elemento HTML - acesso sem uso do getElementByID ou querySelector, o id do objeto DOM é o próprio nome da variável
 - [X] Via getElementByID()
-- [] Via getElementsByName()
-- [] Via getElementsByTagName()
+- [X] Via getElementsByName()
+- [X] Via getElementsByTagName()
 - [X] Via seletores CSS usados na função querySelector() ou querySelectorAll()
 
 ### Tratadores de Evento
@@ -52,8 +52,8 @@ Usar o operador this em funções tratadoras de eventos.
 - [] Manipulação do CSS de forma nativa via atributo style e classList
 
 ### Objetos
-- [] Criar objeto usando função construtora ou notação literal
-- [] (Obrigatório) Criar objetos a partir da definição de classes do ES6 - a classe precisa ser definida em arquivo separado, sendo o nome do arquivo em letras minúsculas no estilo dashed-case e nome da classe em UpperCamelCase
+- [X] Criar objeto usando função construtora ou notação literal
+- [X] (Obrigatório) Criar objetos a partir da definição de classes do ES6 - a classe precisa ser definida em arquivo separado, sendo o nome do arquivo em letras minúsculas no estilo dashed-case e nome da classe em UpperCamelCase
 - [] Usar herança prototipal nativa ou herança de classes do ES6
 
 
@@ -61,7 +61,7 @@ Usar o operador this em funções tratadoras de eventos.
 - [X] Usar um Style Guide - apresentar o uso de pelo menos 10 regras do style escolhido (sugerido AirBnb)
 - [X] Usar um Lint - corrigir todos os problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
 - [X] Usar strict mode - em todos os arquivos
-- [] Usar Module Pattern com função auto-executável ou o conceito de módulo do ES6 com operadores export e import
+- [X] Usar Module Pattern com função auto-executável ou o conceito de módulo do ES6 com operadores export e import
 - [X] Usar pasta assets e subpastas resources e libraries para organizar o código
 - [X] Usar let ou const ao invés de var
 - [X] Nomes de arquivos HTML, JS e CSS minúsculos e separados por hífen (dashed-case)
@@ -94,5 +94,5 @@ Usar o operador this em funções tratadoras de eventos.
 
 ### Requisições assíncronas
 - [] Requisições AJAX para uma implementação funcional do backend em ExpressJS na plataforma Node
-- [] (Obrigatório) Requisições AJAX para uma API Fake - JSON Server 
+- [X] (Obrigatório) Requisições AJAX para uma API Fake - JSON Server 
 - [X] Requisições AJAX para uma API Rest pública qualquer (Busca CEP API ou IBGE API ou outra).

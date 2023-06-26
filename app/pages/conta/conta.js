@@ -1,21 +1,14 @@
 /* global $ */
 
-// Obtém o array de usuários do armazenamento local (localStorage)
 const usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
-// Verifica se há usuários salvos e se o array não está vazio
 if (usuarios && usuarios.length > 0) {
-    // Atualiza o elemento "Nome"
-    const elementoNome = document.getElementById('nome');
+    //Uso via getElementsByTagName()
+    const elementoNome = document.getElementsByTagName('h2')[0];
     elementoNome.textContent = usuarios[0].nome;
 
-    // Atualiza o elemento "Email"
     const elementoEmail = document.getElementById('email');
     elementoEmail.textContent = usuarios[0].email;
-
-    // Atualiza o elemento "Número de Telefone"
-    const elementoNumero = document.getElementById('numero');
-    elementoNumero.textContent = usuarios[0].num;
 }
 
 function buscarCEP() {
@@ -26,22 +19,51 @@ function buscarCEP() {
         url: 'https://viacep.com.br/ws/' + cep + '/json/',
         type: 'GET',
         success: function(response) {
-            $('#rua').text(response.logradouro);
-            $('#bairro').text(response.bairro);
-            $('#cidade').text(response.localidade);
+            // Salvar as informações na API fake
+            const endereco = {
+                cep: response.cep,
+                rua: response.logradouro,
+                bairro: response.bairro,
+                cidade: response.localidade,
+            };
+  
+            // Chamada para atualizar as informações na API fake
+            $.ajax({
+                url: 'http://localhost:3000/usuarios',
+                type: 'POST',
+                data: JSON.stringify(endereco),
+                contentType: 'application/json',
+                success: function() {
+                    $('#rua').text(response.logradouro);
+                    $('#bairro').text(response.bairro);
+                    $('#cidade').text(response.localidade);
+                },
+                error: function() {
+                    $('#mensagem-erro').text('Erro ao buscar o CEP.');
+  
+                    $('#rua').text('');
+                    $('#bairro').text('');
+                    $('#cidade').text('');
+                },
+            });
         },
         error: function() {
             $('#mensagem-erro').text('Erro ao buscar o CEP.');
-        
+  
             $('#rua').text('');
             $('#bairro').text('');
             $('#cidade').text('');
         },
     });
 }
-  
+
 $(document).ready(function() {
-    $('#busca-cep').click(function() {
+    $('form').on('submit', function(event) {
+        event.preventDefault(); // Evita o envio do formulário e recarregamento da página
+        buscarCEP();
+    });
+
+    $('#busca-cep').on('click', function() {
         buscarCEP();
     });
 });

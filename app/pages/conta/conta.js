@@ -3,13 +3,13 @@
 const usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
 if (usuarios && usuarios.length > 0) {
-    //Uso via getElementsByTagName()
     const elementoNome = document.getElementsByTagName('h2')[0];
     elementoNome.textContent = usuarios[0].nome;
 
     const elementoEmail = document.getElementById('email');
-    elementoEmail.textContent = usuarios[0].email;
+    elementoEmail.textContent = usuarios[0].gmail;
 }
+
 
 function buscarCEP() {
     let cep = $('#cep').val();
@@ -66,4 +66,13 @@ $(document).ready(function() {
     $('#busca-cep').on('click', function() {
         buscarCEP();
     });
+});
+
+$('.usuario').mouseenter(function () {
+    $(this).css('background-color', 'red');
+});
+
+$(document).ready(function() {
+    var divContent = $('#minhaDiv').text(); 
+    $('#minhaDiv').text('Informações do Usuario');
 });

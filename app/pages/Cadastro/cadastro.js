@@ -1,5 +1,5 @@
 /* global $ */
-import { Usuario } from '../../model/Usuario.js';
+import { Usuario } from '../../model/usuario.js';
 
 $(document).ready(function() {
     $('#numero').mask('(00) 0000-0000');
@@ -20,7 +20,6 @@ const validarFormulario = (event) => {
         return false;
     }
   
-    // Verifica se já existe a matriz 'usuarios' no localStorage
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
   
     if (!usuarios) {
@@ -34,11 +33,10 @@ const validarFormulario = (event) => {
     } else {
         let usuario = new Usuario(nome.value, gmail.value, senha.value);
   
-        // Adiciona o novo usuário à matriz de usuários
         usuarios.push(usuario);
-  
-        // Armazena a matriz atualizada no localStorage
         localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        localStorage.setItem('nome', nome.value); 
+        localStorage.setItem('email', gmail.value);
   
         gmail.value = '';
         num.value = '';
@@ -47,7 +45,7 @@ const validarFormulario = (event) => {
   
         alert('Cadastro realizado com sucesso!');
   
-        window.location.href = '../../../index.html';
+        window.location.href = '../pagina-principal/pagina-principal.html';
   
         return true;
     }
@@ -55,12 +53,3 @@ const validarFormulario = (event) => {
   
 
 button.addEventListener('click', validarFormulario);
-
-const showMessage = () => {
-};
-
-const formSubmit = () => {
-    showMessage();
-};
-
-formSubmit();

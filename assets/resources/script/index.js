@@ -1,74 +1,38 @@
 /* global $ */
-// Uso Leitura de dados simples- string
-let nome = localStorage.getItem('nome');
-let conta = document.getElementById('conta');
-conta.innerHTML = 'Olá, ' + nome;
+// Leitura de JSON
+const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-//Uso função com nome
-function validarExperiencia() {
-    let validacao;
-    do {
-        //Uso prompt
-        validacao = prompt('Nos conte, sua experiência com a música é: básica ou avançada?');
-        if (validacao === 'basica') {
-            //Uso Alert
-            alert('Não tem problema, aprenda notas simples com apenas um clique conosco');
-        } else if (validacao === 'avançada') {
-            alert('Que ótimo, esperamos atender sua expectativa');
-        } else {
-            alert('Escreva apenas basico ou avancado, nesse formato');
-        }
-    } while (validacao !== 'basica' && validacao !== 'avançada');
+// Uso confirm
+const confirmacao = confirm('Você possui uma conta?');
+if (!confirmacao) {
+    window.location.href = '../../../app/pages/cadastro/cadastro.html';
 }
 
-validarExperiencia();
-
-//Uso função auto-executável
-(function() {
-    const tempoPropaganda = 5000;
-  
-    function addPropaganda() {
-        const propaganda = $('#propaganda');
-        //Uso Efeitos fade:
-        propaganda.fadeIn();
-  
-        let temporizador = tempoPropaganda / 1000;
-        const contador = $('#contador');
-        //Uso string tamplate
-        contador.text(`${temporizador}`);
-        
-        //Uso setInterval
-        const tempo = setInterval(() => {
-            temporizador--;
-            contador.text(`${temporizador}`);
-        }, 1000);
-    
-        //Uso setTimeout
-        setTimeout(() => {
-            clearInterval(tempo);
-            propaganda.fadeOut();
-        }, tempoPropaganda);
+// Uso função anônima com argumento
+document.addEventListener('keydown', function (event) {
+    if (event.key === '*') {
+        window.location = '../../../app/pages/cadastro/cadastro.html';
     }
-    //Uso onload
-    window.addEventListener('load', addPropaganda);
-})();
-
-//Uso passagem de uma função como parâmetro para outra função e getElementByName
-const botao = document.getElementsByName('botao')[0];
-botao.addEventListener('mouseover', function() {
-    //Uso movimento mouse
-    this.style.backgroundColor = 'green !important' ;
 });
 
-$(botao).click(function () { 
-    //Uso de seletores CSS e Manipulação do conteúdo de um input e div usando jQuery:
-    let acorde = $('#selecao-nota').val();
-    $('#acordes-img').attr('src', `assets/resources/img/${acorde}.jpg`);
-});
+// Uso Arrow Function
+const fazerLogin = () => {
+    const email = document.getElementById('email').value;
+    let senha = document.getElementById('senha').value;
 
-$('#logo-site').mouseenter(function () {
-    //Uso Manipulação do CSS via função css() e addClass() ou removeClass():
-    $(this).addClass('destaque');
-}).mouseleave(function () {
-    $(this).removeClass('destaque');
-});
+    const usuarioCadastrado = usuarios.find(
+        (usuario) => usuario.gmail === email && usuario.senha === senha,
+    );
+
+    if (usuarioCadastrado) {
+        alert('Login realizado com sucesso!');
+        window.location.href = '../../../app/pages/pagina-principal/pagina-principal.html';
+    } else {
+        alert('Usuário ou senha inválidos. Tente novamente.');
+    }
+};
+
+// Uso onblur
+function mudarCor(elemento) {
+    elemento.style.backgroundColor = '#23238E';
+}

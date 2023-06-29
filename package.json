@@ -1,15 +1,25 @@
 {
+  
+  "scripts": {
+    "start": "json-server --watch db.json",
+    "start": "parcel index.html",
+    "build:parcel": "parcel build index.html --public-url /roubank",
+    "build": "npm run clean:windows && npm run build:parcel",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "clean:linux": "rm -rf dist/*",
+    "clean:windows": "rd /s/q dist"
+  },
   "description": "",
   "devDependencies": {
     "eslint": "^8.41.0",
-    "eslint-plugin-jquery": "^1.5.1"
+    "eslint-plugin-jquery": "^1.5.1",
+    "gh-pages": "^5.0.0",
+    "parcel": "^2.9.3"
   },
   "dependencies": {
     "axios": "^1.4.0",
     "jquery": "^3.7.0",
     "json-server": "^0.17.3"
-  },
-  "scripts": {
-    "start": "json-server --watch db.json"
   }
 }

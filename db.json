@@ -13,6 +13,13 @@
       "bairro": "Vila Carli",
       "cidade": "Guarapuava",
       "id": 2
+    },
+    {
+      "cep": "85040-380",
+      "rua": "Rua Itororó",
+      "bairro": "Vila Carli",
+      "cidade": "Guarapuava",
+      "id": 3
     }
   ]
 }

@@ -1,78 +1,54 @@
+Cadastro
 <!DOCTYPE html>
-<html lang="pt-br" class="bg-gray-200">
+<html lang="pt-br" class="bg-[url('../../../assets/resources/img/fundo.png')] bg-cover bg-center bg-no-repeat">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="assets/resources/CSS/CSS.css ">
-
-  <title>Violão.ON</title>
+  <title>Login</title>
 </head>
 
 <body>
-  <nav class="bg-white py-4">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between">
-        <div id="logo-site">
-          Violão.on
-        </div>
-        <div class="icone">
-          <a href="app/pages/conta/conta.html" class="text-violet-950">
-            <i id="icone" class="material-icons prefix">account_circle</i>
-            <h2 id="conta" class="ml-2">Conta</h2>
-          </a>
+  <main>
+    <div class="fixed top-0 right-0 p-9">
+      <a href="app/pages/cadastro/cadastro.html"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"> Cadastrar </a>
+    </div>
+
+    <div class="h-screen flex flex-col justify-center items-center">
+      <div class="w-full max-w-md">
+        <div class="bg-white bg-opacity-5 shadow-lg p-8">
+          <h2 class="text-white text-2xl font-bold mb-4"> Entrar </h2>
+          <div class="mb-4">
+            <h1 class="block text-white font-sans text-sm mb-2" for="email"> E-mail</h1>
+            <input id="email"
+              class="shadow appearance-none border border-white rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent hover:border-slate-400"
+              type="email" placeholder="Digite seu e-mail" onblur="mudarCor(this)"> 
+          </div>
+          <div class="mb-4">
+            <h1 class="block text-white font-sans text-sm mb-2" for="password"> Senha </h1>
+            <div class="relative">
+              <input id="senha"
+                class="shadow appearance-none border border-white rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent hover:border-slate-400"
+                type="password" placeholder="Digite sua senha" onblur="mudarCor(this)">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button onclick="fazerLogin()" class="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-auto w-full flex items-center">
+              <span class="text-center w-full">Entrar</span>
+            </button>
+          </div>
+          <h1 class="text-center text-white mt-2"> Não possui cadastro? <a href="app/pages/cadastro/cadastro.html"
+              class="text-center text-blue-500 mt-2"> Cadastrar </a> </h1>
         </div>
       </div>
     </div>
-  </nav>
-
-  <main>
-    <div class="mx-48 mt-20">
-      <h1 class="text-3xl mt-8 font-sans mb-4 text-violet-950">DEFINIÇÕES</h1>
-      <hr class="border-violet-950 mb-10">
-      <div class="flex items-center">
-        <div class="flex flex-col items-center">
-          <div class="flex justify-center">
-            <div class="flex flex-col mr-8">
-              <h1 class="text-violet-950">Nota:</h1>
-              <select class="border-gray-900 rounded-lg mr-4 py-2 px-4 mb-10 w-64" name="nota" id="selecao-nota">
-                <option value="C">C</option>
-                <option value="D">D</option>
-                <option value="E">E</option>
-                <option value="F">F</option>
-                <option value="G">G</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-              </select>
-              <div>
-                <h1 class="text-violet-950">Posição do violão:</h1>
-                <input type="radio" name="posicao" value="destro">
-                <label for="destro" class="text-violet-950">Destro</label>
-              </div>
-              <div class="mb-10">
-                <input type="radio" name="posicao" value="canhoto">
-                <label for="canhoto" class="text-violet-950">Canhoto</label>
-              </div>
-              <button name="botao" style="cursor:pointer" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-10">Buscar</button>
-            </div>
-            <div class="w-64 h-40 flex justify-center items-center mt-4 md:mt-0">
-              <img id="acordes-img" class="paisagem imagem-reduzida" src="assets/resources/img/fundo-notas.png">
-            </div>
-          </div>
-        </div>     
   </main>
 
-  <div id="propaganda">
-    <img src="assets/resources/img/propaganda.jpg" alt="Propaganda">
-    <div id="contador"></div>
-  </div>
-
-  <div id="elemento-pai"></div>
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../../../jquery-mask.js"></script>
   <script src="assets/resources/script/index.js"></script>
 </body>
 
